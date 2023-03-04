@@ -1,0 +1,9 @@
+[configuration]
+
+entry_symbol = "gdflecs_library_init"
+
+[libraries]
+
+linux.64="res://bin/libgdflecs.linux.64.so"
+windows.x86_64="res://bin/libgdflecs.windows.template_debug.dev.x86_64.dll"
+macos="res://bin/libgdflecs.macos.framework"
