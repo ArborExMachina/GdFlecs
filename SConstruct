@@ -2,6 +2,8 @@
 import os
 import sys
 
+from glob import glob
+
 env = SConscript("godot-cpp/SConstruct")
 
 # For reference:
@@ -14,7 +16,11 @@ env = SConscript("godot-cpp/SConstruct")
 
 # tweak this if you want to use different folders, or more folders, to store your source code in.
 env.Append(CPPPATH=["src/"])
-sources = Glob("src/*.cpp")
+sources = [
+    "src/flecs/flecs.c"
+]
+sources.extend(glob("src/**/*.cpp", recursive=True))
+print(sources)
 
 if env["platform"] == "macos":
     library = env.SharedLibrary(

@@ -11,6 +11,7 @@ All that is needed to use the bindings from gdscript are the GDExtension dlls. I
 - more steps soon (tm)
 
 #### Debugging with VSCode and lldb
+- build with `target=template_debug dev_build=yes debug_symbols=yes`
 - install the CodeLLDB extension
 - add something similar to this launch.json
 
