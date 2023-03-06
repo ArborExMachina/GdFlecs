@@ -1,0 +1,1 @@
+- replace all `string.ascii().get_data()` instances if possible with something that won't memnew() all the time. Probably not a big deal, but there is a decent chance something like filter() will be used every frame.

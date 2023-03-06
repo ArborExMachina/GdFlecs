@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bl0whrrdc4da7"]
+
+[ext_resource type="Script" path="res://TestScenes/Blackhole/Blackhole.gd" id="1_ily47"]
+[ext_resource type="Script" path="res://TestScenes/Blackhole/GravitySystem.gd" id="2_by6a1"]
+
+[node name="Blackhole" type="Node2D"]
+script = ExtResource("1_ily47")
+
+[node name="ECSWorld" type="ECSWorld" parent="."]
+
+[node name="Gravity" type="GDSystem" parent="ECSWorld"]
+script = ExtResource("2_by6a1")
+
+[node name="Camera2D" type="Camera2D" parent="."]
